@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Resume-Portfolio-websites</title>
-    <link rel="stylesheet" href="./cssStyle/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
 
 
 <body>
     <!-- Navbar strat -->
     <div class="navbar" style="position: sticky;">
         <div class="logo">G.P.R</div>
-        <a href="./index.html" class="active">ABOUT ME</a>
-        <a href="./resume.html">RESUME</a>
-        <a href="./project.html">PROJECTS</a>
-        <a href="./contact.html">CONTACT</a>
+        <a th:href="@{./index.html}" class="active">ABOUT ME</a>
+        <a th:href="@{./resume.html}">RESUME</a>
+        <a th:href="@{./project.html}">PROJECTS</a>
+        <a th:href="@{./contact.html}">CONTACT</a>
     </div>
     <!-- Navbar End -->
 
@@ -36,9 +36,9 @@
                 </div>
             </div>
             <div class="cart-social-links">
-                <a href="https://www.linkedin.com/in/gauravpant"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-                <a href="https://github.com/GauravPant47"><i class="fa fa-github" style="color: black;"></i></a>
-                <a href="https://twitter.com/gauravpant63469"><i class="fa fa-twitter"
+                <a th:href="@{https://www.linkedin.com/in/gauravpant}"><i class="fa fa-linkedin" style="color: blue;"></i></a>
+                <a th:href="@{https://github.com/GauravPant47}"><i class="fa fa-github" style="color: black;"></i></a>
+                <a th:href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter"
                         style="color: rgb(0, 102, 255);"></i></a>
             </div>
         </div>
@@ -48,8 +48,8 @@
         <div class="right-side-resume">
             <h1>Hello</h1>
             <h2>Here's who I am & what I do</h2>
-            <a href="./resume.html"><button class="btn btnLeft">RESUME</button></a>
-            <a href="./project.html"><button class="btn btnRight">PROJECT</button></a>
+            <a th:href="@{./resume.html}"><button class="btn btnLeft">RESUME</button></a>
+            <a href="@{./project.html}"><button class="btn btnRight">PROJECT</button></a>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates incidunt, alias voluptatum numquam
                 itaque doloribus inventore, quaerat provident autem quia magni tempora repellat. Eius molestias, veniam
                 voluptatem natus praesentium animi!</p>
@@ -59,8 +59,6 @@
         <!-- <div>
             
         </div> -->
-
-
     </div>
 
     <!-- About Me -->
@@ -77,9 +75,9 @@
                 <a href="mailto:contact@gauravpant.com">Email: contact@gauravpant.com</a>
             </div>
             <div class="footer-social-media">
-                <a href="https://www.linkedin.com/in/gauravpant"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-                <a href="https://github.com/GauravPant47"><i class="fa fa-github"></i></a>
-                <a href="https://twitter.com/gauravpant63469"><i class="fa fa-twitter"
+                <a th:href="@{https://www.linkedin.com/in/gauravpant}"><i class="fa fa-linkedin" style="color: blue;"></i></a>
+                <a href="@{https://github.com/GauravPant47}"><i class="fa fa-github"></i></a>
+                <a href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter"
                         style="color: rgb(0, 102, 255);"></i></a>
             </div>
         </div>

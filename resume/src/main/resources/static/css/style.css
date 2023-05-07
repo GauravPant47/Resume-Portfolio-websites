@@ -11,7 +11,7 @@
 .navbar {
     display: flex;
     align-items: center;
-    background-color: transparent;
+    background-color: #ffffff;
     color: #000000;
     height: 100px;
     padding: 0 20px;
@@ -224,13 +224,13 @@
 
 /* Footer styling */
 .footer {
-    background-color: transparent;
+    background-color: #ffffff;
     color: #050505;
     padding: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 0;
+    caption-side: bottom;
 }
 
 /* Left side styling */

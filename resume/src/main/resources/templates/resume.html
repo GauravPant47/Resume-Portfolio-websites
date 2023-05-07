@@ -4,34 +4,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Resume-Portfolio-websites</title>
-	<link rel="stylesheet" href="./cssStyle/style.css">
-	<link rel="stylesheet" href="./cssStyle/resumeStyle.css">
-
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
 
 <body>
 	<!-- Navbar strat -->
 	<div class="navbar">
 		<div class="logo">G.P.R</div>
-		<a href="./index.html" class="active">ABOUT ME</a>
-		<a href="./resume.html">RESUME</a>
-		<a href="./project.html">PROJECTS</a>
-		<a href="./contact.html">CONTACT</a>
+		<a th:href="@{/index.html}" class="active">ABOUT ME</a>
+		<a th:href="@{/resume}">RESUME</a>
+		<a th:href="@{/project.html}">PROJECTS</a>
+		<a th:href="@{/contact.html}">CONTACT</a>
 	</div>
 	<!-- Navbar End -->
 
 	<!-- About Me -->
-	<div class="container-mid">
-		<div class="container-mid-square">
-			<span class="square"></span>
-			<p class="bold">Resume</p>
+
+	<span class="">Experience</span>
+	<div class="container" th:each="ExperienceModel: ${resume}">
+		<div class="left">
+			<label th:text="${ExperienceModel.Experience}"></label>
+			<label th:text="${ExperienceModel.Experience}"></label>
+			<label th:text="${ExperienceModel.Experience}"></label>
+			<label th:text="${ExperienceModel.Experience}"></label>
+			<label th:text="${ExperienceModel.Experience}"></label>
 		</div>
-		<hr>
-		<div class="container-mid-space">
-			<span class="container-mid-space-ex">Experience</span>
-			<a href="#">DOWNLOAD CV</a>
+		<div class="right">
+			<label th:text="${ExperienceModel.Experience}"></label>
 		</div>
 	</div>
-	
+
+
+
 	<!-- About Me -->
 
 
@@ -54,6 +58,8 @@
 		</div>
 	</footer>
 	<!-- Footer End -->
+	<!-- Add a JavaScript file to handle the form submission and display the job description -->
+	<script th:src="@{/js/cart.js}"></script>
 </body>
 
 </html>
