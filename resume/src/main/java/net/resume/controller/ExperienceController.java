@@ -11,24 +11,36 @@ import net.resume.service.ExperienceService;
 public class ExperienceController {
 	@Autowired
 	private ExperienceService experienceService;
-	
-	
+
 	public ExperienceController(ExperienceService experienceService) {
 		super();
 		this.experienceService = experienceService;
 	}
 
-
-	
-	@GetMapping("/example.com")
+	@GetMapping("/index")
 	public String mainPage(Model model) {
-		model.addAttribute("message","Hello");
+		model.addAttribute("message", "Hello");
 		return "index";
 	}
-	
-	@GetMapping("/index/experience")
+
+	@GetMapping("/employment")
 	public String findAllList(Model model) {
-		model.addAttribute("resume",experienceService.findAllListItem());
+		model.addAttribute("resume", experienceService.findAllListItem());
 		return "resume";
+	}
+
+	@GetMapping("/education")
+	public String myEducation() {
+		return "education";
+	}
+
+	@GetMapping("/project")
+	public String myProjects() {
+		return "project";
+	}
+
+	@GetMapping("/contact")
+	public String myContact() {
+		return "contact";
 	}
 }

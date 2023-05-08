@@ -22,8 +22,8 @@ public class ResumeApplication implements CommandLineRunner{
 	
 	@Override
 	public void run(String... args) throws Exception {
-			ExperienceModel experienceModel1 = new ExperienceModel("Ongrid", "1.6-Years", "Gurugram", "This is a Back ground company");
-			experienceRepository.save(experienceModel1);
+//			ExperienceModel experienceModel1 = new ExperienceModel("Ongrid", "1.6-Years", "Gurugram", "This is a Back ground company");
+//			experienceRepository.save(experienceModel1);
 	}
 
 }

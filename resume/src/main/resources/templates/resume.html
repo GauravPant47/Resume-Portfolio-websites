@@ -11,23 +11,24 @@
 	<!-- Navbar strat -->
 	<div class="navbar">
 		<div class="logo">G.P.R</div>
-		<a th:href="@{/index.html}" class="active">ABOUT ME</a>
-		<a th:href="@{/resume}">Experience</a>
-		<a th:href="@{/project.html}">PROJECTS</a>
-		<a th:href="@{/contact.html}">CONTACT</a>
+		<a th:href="@{/index}" class="active">ABOUT ME</a>
+		<a th:href="@{/employment}">EMPLOYMENT</a>
+		<a th:href="@{/education}">EDUCATION</a>
+		<a th:href="@{/project}">PROJECTS</a>
+		<a th:href="@{/contact}">CONTACT</a>
 	</div>
 	<!-- Navbar End -->
 
 	<!-- About Me -->
 
 
-	<h1 class="hide">Designation</h1>
-	<h1 class="hide">Compan-yName</h1>
-	<h1 class="hide">Total-Experience</h1>
-	<h1 class="hide">Job-Profile</h1>
+	<h1 href="" class="hide">Designation</h1>
+	<h1 class="hide">Company_Name</h1>
+	<h1 class="hide">Total_Experience</h1>
+	<h1 class="hide">Job_Profile</h1>
 	<div class="cart">
 		<div class="cart-header">
-			Experience
+			Employment
 		</div>
 		<table>
 			<tr th:each="ExperienceModel: ${resume}">
@@ -35,13 +36,13 @@
 				<td th:text="${ExperienceModel.Designation}" class="color"></td>
 			</tr>
 			<tr>
-				<td th:text="${ExperienceModel.Company-Name}"></td>
+				<td th:text="${ExperienceModel.Designation}"></td>
 			</tr>
 			<tr>
-				<td th:text="${ExperienceModel.Total-Experience}"></td>
+				<td th:text="${ExperienceModel.Designation}"></td>
 			</tr>
 			<tr>
-				<td th:text="${ExperienceModel.Job-Profile}"></td>
+				<td th:text="${ExperienceModel.Designation}"></td>
 			</tr>
 			</tr>
 		</table>
@@ -60,11 +61,12 @@
 				<a href="mailto:contact@gauravpant.com">Email: contact@gauravpant.com</a>
 			</div>
 			<div class="footer-social-media">
-                <a th:href="@{https://www.linkedin.com/in/gauravpant}"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-                <a th:href="@{https://github.com/GauravPant47}"><i class="fa fa-github"></i></a>
-                <a th:href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter"
-                        style="color: rgb(0, 102, 255);"></i></a>
-            </div>
+				<a th:href="@{https://www.linkedin.com/in/gauravpant}"><i class="fa fa-linkedin"
+						style="color: blue;"></i></a>
+				<a th:href="@{https://github.com/GauravPant47}"><i class="fa fa-github"></i></a>
+				<a th:href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter"
+						style="color: rgb(0, 102, 255);"></i></a>
+			</div>
 		</div>
 	</footer>
 	<!-- Footer End -->
