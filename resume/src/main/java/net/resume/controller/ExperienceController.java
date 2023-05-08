@@ -9,11 +9,24 @@ import net.resume.service.ExperienceService;
 
 @Controller
 public class ExperienceController {
-	@Autowired
+//	@Autowired
 	private ExperienceService experienceService;
 	
 	
-	@GetMapping("/experience")
+	public ExperienceController(ExperienceService experienceService) {
+		super();
+		this.experienceService = experienceService;
+	}
+
+
+	
+	@GetMapping("/index")
+	public String mainPage(Model model) {
+		model.addAttribute("message","Hello");
+		return "index";
+	}
+	
+	@GetMapping("/index/experience")
 	public String findAllList(Model model) {
 		model.addAttribute("resume",experienceService.findAllListItem());
 		return "resume";

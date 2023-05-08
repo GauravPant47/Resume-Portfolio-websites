@@ -12,10 +12,10 @@
     <!-- Navbar strat -->
     <div class="navbar" style="position: sticky;">
         <div class="logo">G.P.R</div>
-        <a th:href="@{./index.html}" class="active">ABOUT ME</a>
-        <a th:href="@{./resume.html}">RESUME</a>
-        <a th:href="@{./project.html}">PROJECTS</a>
-        <a th:href="@{./contact.html}">CONTACT</a>
+        <a th:href="@{/index}" class="active">ABOUT ME</a>
+        <a th:href="@{/index/experience}">RESUME</a>
+        <a th:href="@{/project}">PROJECTS</a>
+        <a th:href="@{/contact}">CONTACT</a>
     </div>
     <!-- Navbar End -->
 
@@ -27,7 +27,7 @@
         <div class="cart-container">
             <div class="cart-container-image">
                 <div class="cart-image">
-                    <img id="cart-image-preview" src="../static/IMG_20210414_084158499.jpg">
+                    <img id="cart-image-preview" th:src="@{/image/IMG_20210414_084158499.jpg}">
                 </div>
                 <div class="cart-details">
                     <h1>Gaurav Pant</h1><br>
@@ -46,10 +46,10 @@
     <div class="right-side">
         <!-- content for right side goes here -->
         <div class="right-side-resume">
-            <h1>Hello</h1>
+            <h1 th:text="${message}"></h1>
             <h2>Here's who I am & what I do</h2>
-            <a th:href="@{./resume.html}"><button class="btn btnLeft">RESUME</button></a>
-            <a href="@{./project.html}"><button class="btn btnRight">PROJECT</button></a>
+            <a th:href="@{/index/experience}"><button class="btn btnLeft">RESUME</button></a>
+            <a th:href="@{/project}"><button class="btn btnRight">PROJECT</button></a>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates incidunt, alias voluptatum numquam
                 itaque doloribus inventore, quaerat provident autem quia magni tempora repellat. Eius molestias, veniam
                 voluptatem natus praesentium animi!</p>
@@ -76,8 +76,8 @@
             </div>
             <div class="footer-social-media">
                 <a th:href="@{https://www.linkedin.com/in/gauravpant}"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-                <a href="@{https://github.com/GauravPant47}"><i class="fa fa-github"></i></a>
-                <a href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter"
+                <a th:href="@{https://github.com/GauravPant47}"><i class="fa fa-github"></i></a>
+                <a th:href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter"
                         style="color: rgb(0, 102, 255);"></i></a>
             </div>
         </div>

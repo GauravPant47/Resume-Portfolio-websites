@@ -11,7 +11,7 @@ import net.resume.repository.ExperienceRepository;
 @Service
 public class ExperienceServiceImpl implements ExperienceService {
 
-	@Autowired
+//	@Autowired
 	private ExperienceRepository experienceRepository;
 
 	public ExperienceServiceImpl(ExperienceRepository experienceRepository) {
