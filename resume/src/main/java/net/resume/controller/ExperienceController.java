@@ -20,7 +20,7 @@ public class ExperienceController {
 
 
 	
-	@GetMapping("/index")
+	@GetMapping("/example.com")
 	public String mainPage(Model model) {
 		model.addAttribute("message","Hello");
 		return "index";
