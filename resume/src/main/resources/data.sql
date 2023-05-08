@@ -13,3 +13,5 @@ years_of_experince varchar(300) not null,
 location varchar(300) not null,
 description varchar(2000) not null
 );
+
+select * from experience;

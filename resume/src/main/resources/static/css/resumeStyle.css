@@ -1,32 +1,37 @@
 body{
     background-color: #f0dee7;
 }
-.container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20%; 
-    border: 1px solid #000000;
-    background-color: #ffffff;
+.cart {
+    background-color: white;
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
 }
 
-.left, .right {
-    width: 100%;
-}
-
-.left {
-    padding: 40px;
-}
-
-.right {
-    padding: 40px;
-}
-
-h2 {
-    font-size: 18px;
+.cart-header {
+    font-size: 24px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 16px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 30px;
+}
+
+.hide {
+    visibility: hidden;
+}
+.color{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+th {
+    padding: 5px;
+    text-align: left;
 }

@@ -12,7 +12,7 @@
 	<div class="navbar">
 		<div class="logo">G.P.R</div>
 		<a th:href="@{/index.html}" class="active">ABOUT ME</a>
-		<a th:href="@{/resume}">RESUME</a>
+		<a th:href="@{/resume}">Experience</a>
 		<a th:href="@{/project.html}">PROJECTS</a>
 		<a th:href="@{/contact.html}">CONTACT</a>
 	</div>
@@ -20,23 +20,32 @@
 
 	<!-- About Me -->
 
-	
-	<div class="container" th:each="ExperienceModel: ${resume}">
-		<span class="">Experience</span>
-		<div class="left">
-			<label th:text="${ExperienceModel.Experience}"></label>
-			<label th:text="${ExperienceModel.Experience}"></label>
-			<label th:text="${ExperienceModel.Experience}"></label>
-			<label th:text="${ExperienceModel.Experience}"></label>
-			<label th:text="${ExperienceModel.Experience}"></label>
+
+	<h1 class="hide">Designation</h1>
+	<h1 class="hide">Compan-yName</h1>
+	<h1 class="hide">Total-Experience</h1>
+	<h1 class="hide">Job-Profile</h1>
+	<div class="cart">
+		<div class="cart-header">
+			Experience
 		</div>
-		<div class="right">
-			<label th:text="${ExperienceModel.Experience}"></label>
-		</div>
+		<table>
+			<tr th:each="ExperienceModel: ${resume}">
+			<tr>
+				<td th:text="${ExperienceModel.Designation}" class="color"></td>
+			</tr>
+			<tr>
+				<td th:text="${ExperienceModel.Company-Name}"></td>
+			</tr>
+			<tr>
+				<td th:text="${ExperienceModel.Total-Experience}"></td>
+			</tr>
+			<tr>
+				<td th:text="${ExperienceModel.Job-Profile}"></td>
+			</tr>
+			</tr>
+		</table>
 	</div>
-
-
-
 	<!-- About Me -->
 
 
@@ -51,11 +60,11 @@
 				<a href="mailto:contact@gauravpant.com">Email: contact@gauravpant.com</a>
 			</div>
 			<div class="footer-social-media">
-				<a href="https://www.linkedin.com/in/gauravpant"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-				<a href="https://github.com/GauravPant47"><i class="fa fa-github"></i></a>
-				<a href="https://twitter.com/gauravpant63469"><i class="fa fa-twitter"
-						style="color: rgb(0, 102, 255);"></i></a>
-			</div>
+                <a th:href="@{https://www.linkedin.com/in/gauravpant}"><i class="fa fa-linkedin" style="color: blue;"></i></a>
+                <a th:href="@{https://github.com/GauravPant47}"><i class="fa fa-github"></i></a>
+                <a th:href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter"
+                        style="color: rgb(0, 102, 255);"></i></a>
+            </div>
 		</div>
 	</footer>
 	<!-- Footer End -->

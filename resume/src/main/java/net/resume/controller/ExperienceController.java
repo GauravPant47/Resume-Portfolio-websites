@@ -9,7 +9,7 @@ import net.resume.service.ExperienceService;
 
 @Controller
 public class ExperienceController {
-//	@Autowired
+	@Autowired
 	private ExperienceService experienceService;
 	
 	
