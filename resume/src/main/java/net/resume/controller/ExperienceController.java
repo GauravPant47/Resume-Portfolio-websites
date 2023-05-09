@@ -23,10 +23,10 @@ public class ExperienceController {
 		return "index";
 	}
 
-	@GetMapping("/employment")
+	@GetMapping("/experience")
 	public String findAllList(Model model) {
-		model.addAttribute("resume", experienceService.findAllListItem());
-		return "resume";
+		model.addAttribute("experience", experienceService.findAllListItem());
+		return "experience";
 	}
 
 	@GetMapping("/education")

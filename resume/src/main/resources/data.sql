@@ -6,14 +6,15 @@ create database PersonaPortfolio;
 drop database experienceData;
 use PersonaPortfolio;
 
-create table Employment(
+create table experience(
 experience_id int auto_increment primary key,
+title varchar(300) not null,
 company_name varchar(300) not null,
-years_of_experince varchar(300) not null,
 location varchar(300) not null,
+working_year varchar(300) not null,
 description varchar(2000) not null
 );
 
-select * from Employment;
-
+select * from experience;
+-- experience
 drop table experience;

@@ -8,64 +8,56 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "employment")
+@Table(name = "experience")
 public class ExperienceModel {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "experience_id")
 	private long experienceid;
-	
+
+	@Column(name = "title")
+	private String title;
+
 	@Column(name = "company_name")
-	private String companyName;
-	
-	@Column(name = "years_of_experince")
-	private String yearsOfExperince;
-	
+	private String companyname;
+
 	@Column(name = "location")
 	private String location;
-	
+
+	@Column(name = "working_year")
+	private String workingyear;
+
 	@Column(name = "description")
 	private String description;
-	
-	
-	
 
 	public ExperienceModel() {
-		
+
 	}
 
-	public ExperienceModel(String companyName, String yearsOfExperince, String location, String description) {
+	public ExperienceModel(String title, String companyname, String location, String workingyear, String description) {
 		super();
-		this.companyName = companyName;
-		this.yearsOfExperince = yearsOfExperince;
+		this.title = title;
+		this.companyname = companyname;
 		this.location = location;
+		this.workingyear = workingyear;
 		this.description = description;
 	}
 
-	
-	public long getExperienceid() {
-		return experienceid;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setExperienceid(long experienceid) {
-		this.experienceid = experienceid;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getCompanyName() {
-		return companyName;
+	public String getCompanyname() {
+		return companyname;
 	}
 
-	public void setCompanyName(String companyName) {
-		this.companyName = companyName;
-	}
-
-	public String getYearsOfExperince() {
-		return yearsOfExperince;
-	}
-
-	public void setYearsOfExperince(String yearsOfExperince) {
-		this.yearsOfExperince = yearsOfExperince;
+	public void setCompanyname(String companyname) {
+		this.companyname = companyname;
 	}
 
 	public String getLocation() {
@@ -74,6 +66,14 @@ public class ExperienceModel {
 
 	public void setLocation(String location) {
 		this.location = location;
+	}
+
+	public String getWorkingyear() {
+		return workingyear;
+	}
+
+	public void setWorkingyear(String workingyear) {
+		this.workingyear = workingyear;
 	}
 
 	public String getDescription() {

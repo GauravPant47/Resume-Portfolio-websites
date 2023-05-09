@@ -12,7 +12,7 @@
 	<div class="navbar">
 		<div class="logo">G.P.R</div>
 		<a th:href="@{/index}" class="active">ABOUT ME</a>
-		<a th:href="@{/employment}">EMPLOYMENT</a>
+		<a th:href="@{/experience}">EMPLOYMENT</a>
 		<a th:href="@{/education}">EDUCATION</a>
 		<a th:href="@{/project}">PROJECTS</a>
 		<a th:href="@{/contact}">CONTACT</a>
@@ -22,29 +22,29 @@
 	<!-- About Me -->
 
 
-	<h1 href="" class="hide">Designation</h1>
-	<h1 class="hide">Company_Name</h1>
-	<h1 class="hide">Total_Experience</h1>
-	<h1 class="hide">Job_Profile</h1>
 	<div class="cart">
 		<div class="cart-header">
 			Employment
 		</div>
 		<table>
-			<tr th:each="ExperienceModel: ${resume}">
-			<tr>
-				<td th:text="${ExperienceModel.Designation}" class="color"></td>
-			</tr>
-			<tr>
-				<td th:text="${ExperienceModel.Designation}"></td>
-			</tr>
-			<tr>
-				<td th:text="${ExperienceModel.Designation}"></td>
-			</tr>
-			<tr>
-				<td th:text="${ExperienceModel.Designation}"></td>
-			</tr>
-			</tr>
+			<thead>
+				<tr>
+					<th>title</th>
+					<th>company_name</th>
+					<th>location</th>
+					<th>working_year</th>
+					<th>description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="ExperienceModel: ${experience}">
+					<td th:text="${ExperienceModel.title}" class="color"></td>
+					<td th:text="${ExperienceModel.company_name}"></td>
+					<td th:text="${ExperienceModel.location}"></td>
+					<td th:text="${ExperienceModel.working_year}"></td>
+					<td th:text="${ExperienceModel.description}"></td>
+				</tr>
+			</tbody>
 		</table>
 	</div>
 	<!-- About Me -->
