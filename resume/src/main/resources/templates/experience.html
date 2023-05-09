@@ -20,36 +20,28 @@
 	<!-- Navbar End -->
 
 	<!-- About Me -->
-
-
+	<div class="cart-header">
+		Employment
+		<a th:href="@{/employment}"><button class="btn btnLeft">DOWNLOAD</button></a>
+	</div>
 	<div class="cart">
-		<div class="cart-header">
-			Employment
-		</div>
-		<table>
-			<thead>
-				<tr>
-					<th>title</th>
-					<th>company_name</th>
-					<th>location</th>
-					<th>working_year</th>
-					<th>description</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="ExperienceModel: ${experience}">
-					<td th:text="${ExperienceModel.title}" class="color"></td>
-					<td th:text="${ExperienceModel.company_name}"></td>
-					<td th:text="${ExperienceModel.location}"></td>
-					<td th:text="${ExperienceModel.working_year}"></td>
-					<td th:text="${ExperienceModel.description}"></td>
-				</tr>
-			</tbody>
-		</table>
+		<label class="right color">Operations Analyst</label>
+		<label class="right">OnGrid - Background verification platform</label>
+		<label class="right">Gurugram, Haryana, India</label>
+		<label class="right">Nov 2020 to Jul 2022 (1 year 9 months)</label>
+		<label class="right">My responsibilities for this company were Field Onboarding, Field management
+			and Cluster
+			Checking, Daily Data Dump Generation, Data Assignment, and Data Entry</label>
+	</div>
+	<div class="cart">
+		<label class="right color">Quality Inspector</label>
+		<label class="right">Motherson Sumi Systems</label>
+		<label class="right">Kutch district, Gujarat, India</label>
+		<label class="right">Jun 2019 to Sep 2020 (1 year 4 months)</label>
+		<label class="right">In this company, my job was manpower handling daily Production output and quality
+			maintenance and Daily Production Planning.</label>
 	</div>
 	<!-- About Me -->
-
-
 	<!-- Footer strat -->
 	<footer class="footer">
 		<div class="footer-left">&copy; 2023 Gaurav-Pant Inc.</div>

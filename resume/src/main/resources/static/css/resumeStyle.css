@@ -4,18 +4,28 @@ body {
 
 .cart {
     background-color: white;
-    width: 40%;
+    width: 45%;
     margin: auto;
+    margin-bottom: 5%;
     padding: 20px;
     /* border: 1px solid black; */
     border-radius: 10px;
-    margin-bottom: 10%;
 }
 
 .cart-header {
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20vh;;
+    margin-left: 5vh;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+.color{
+    color: blue;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 table {
@@ -24,22 +34,19 @@ table {
     border-spacing: 30px;
 }
 
-/* .hide {
-    visibility: hidden;
-} */
+.hide {
+    /* visibility: hidden; */
+}
 
-.color {
-    color: blue;
+.right {
+    display: block;
+    align-items: baseline;
+    justify-content: center;
+    margin: 15px;
+}
+.left{
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: bold;
 }
 
-th {
-    padding: 5px;
-    text-align: left;
-}
-
-td {
-    padding: 10px;
-    text-align: left;
-}
