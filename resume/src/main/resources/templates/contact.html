@@ -23,7 +23,7 @@
 	<!-- Navbar End -->
 
 	<!-- About Me -->
-	<div>
+	<div class="center">
 		<h2>Contact Us</h2>
 	</div>
 	<form th:action="@{/contact}" method="post">
@@ -31,13 +31,13 @@
 		<input type="text" id="fullName" name="fullname" required maxlength="45">
 
 		<label for="email">E-mail:</label>
-		<input type="email" id="email" name="email" required maxlength="45">
+		<input type="email" name="email" required maxlength="45">
 
 		<label for="subject">Subject:</label>
-		<input type="text" id="subject" name="subject" required minlength="10" maxlength="200">
+		<input type="text"  name="subject" required minlength="10" maxlength="200">
 
 		<label for="content">Content:</label>
-		<textarea id="content" name="content" required minlength="10" maxlength="2000"></textarea>
+		<textarea name="content" required minlength="10" maxlength="2000"></textarea>
 
 		<input type="submit" value="Send">
 	</form>

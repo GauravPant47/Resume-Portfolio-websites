@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<title>Resume-Portfolio-websites</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet"
+	th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+
 <style>
+.body {
+	background-color: #f0dee7;
+}
+
 .centered {
 	display: flex;
 	justify-content: center;
@@ -22,21 +30,19 @@ h1 {
 	<!-- Navbar strat -->
 	<div class="navbar">
 		<div class="logo">G.P.R</div>
-		<a th:href="@{/index}" class="active">ABOUT ME</a>
-        <a th:href="@{/experience}">EMPLOYMENT</a>
-        <a th:href="@{/education}">EDUCATION</a>
-        <a th:href="@{/project}">PROJECTS</a>
-        <a th:href="@{/contact}">CONTACT</a>
+		<a th:href="@{/index}" class="active">ABOUT ME</a> <a
+			th:href="@{/experience}">EMPLOYMENT</a> <a th:href="@{/education}">EDUCATION</a>
+		<a th:href="@{/project}">PROJECTS</a> <a th:href="@{/contact}">CONTACT</a>
 	</div>
 	<!-- Navbar End -->
-	
+
 	<!-- main Content -->
 
 	<div class="centered">
 		<h1>Message Sender</h1>
 	</div>
 	<!-- main Content -->
-		<!-- Footer strat -->
+	<!-- Footer strat -->
 	<footer class="footer">
 		<div class="footer-left">&copy; 2023 Gaurav-Pant Inc.</div>
 		<div class="footer-right">
@@ -44,13 +50,15 @@ h1 {
 				<a href="tel:+1234567890">Call: +1 (234) 567-890</a>
 			</div>
 			<div class="footer-contact">
-				<a href="mailto:contact@gauravpant.com">Email: contact@gauravpant.com</a>
+				<a href="mailto:contact@gauravpant.com">Email:
+					contact@gauravpant.com</a>
 			</div>
 			<div class="footer-social-media">
-				<a href="https://www.linkedin.com/in/gauravpant"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-				<a href="https://github.com/GauravPant47"><i class="fa fa-github"></i></a>
-				<a href="https://twitter.com/gauravpant63469"><i class="fa fa-twitter"
-						style="color: rgb(0, 102, 255);"></i></a>
+				<a href="https://www.linkedin.com/in/gauravpant"><i
+					class="fa fa-linkedin" style="color: blue;"></i></a> <a
+					href="https://github.com/GauravPant47"><i class="fa fa-github"></i></a>
+				<a href="https://twitter.com/gauravpant63469"><i
+					class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
 			</div>
 		</div>
 	</footer>
