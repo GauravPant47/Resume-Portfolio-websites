@@ -1,4 +1,4 @@
-package net.resume.service;
+package net.resume.service.impl;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.InternetAddress;
@@ -9,6 +9,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
 import net.resume.model.Mail;
+import net.resume.service.MailService;
 
 public class MailServiceImpl implements MailService {
 
