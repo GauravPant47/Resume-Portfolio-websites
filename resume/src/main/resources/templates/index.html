@@ -61,11 +61,9 @@
             <h2>Here's who I am & what I do</h2>
             <a th:href="@{/employment}"><button class="btn btnLeft">RESUME</button></a>
             <a th:href="@{/project}"><button class="btn btnRight">PROJECT</button></a>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates incidunt, alias voluptatum numquam
-                itaque doloribus inventore, quaerat provident autem quia magni tempora repellat. Eius molestias, veniam
-                voluptatem natus praesentium animi!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto omnis inventore, dolor accusantium
-                voluptatem neque voluptatum quo deleniti. Obcaecati officia</p>
+            <p>My name is Gaurav Pant. I have a diploma in Mechanical Engineering. Currently, I am pursuing a Bachelor's degree in Information Technology.</p>
+            <p>I also have three years of work experience. I worked for 1.4 years in an automobile company and 1.6 years in logistics. After that, I joined Skill-Link to enhance my IT skills.</p>
+            <p>I studied Java, Databases, and the Spring Boot Framework at Skill-Link. Additionally, I learned to work with Git and GitHub, as well as Docker. I already possess skills in HTML and CSS.</p>
         </div>
         <!-- <div>
             
@@ -85,21 +83,21 @@
             <p>Call: 1-800-123-4567</p>
         </div>
         <div class="right">
-            <a href="https://www.linkedin.com/in/gauravpant"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-            <a href="https://github.com/GauravPant47"><i class="fa fa-github"></i></a>
-            <a href="https://twitter.com/gauravpant63469"><i class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
-        </div>
+			<a th:href="@{https://www.linkedin.com/in/gauravpant}"><i class="fa fa-linkedin" style="color: blue;"></i></a>
+			<a th:href="@{https://github.com/GauravPant47}"><i class="fa fa-github" style="color: black;"></i></a>
+			<a th:href="@{https://twitter.com/gauravpant63469}"><i class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
+		</div>
     </footer>
     <!-- Footer End -->
-    </body>
-    <script>
-        const burger = document.querySelector('.burger');
-        const nav = document.querySelector('.nav-links');
+</body>
+<script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
 
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('show');
-            burger.classList.toggle('nav-active');
-        });
-    </script>
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('show');
+        burger.classList.toggle('nav-active');
+    });
+</script>
 
 </html>
