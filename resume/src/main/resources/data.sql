@@ -19,4 +19,12 @@ select * from experience;
 -- experience
 drop table experience;
 
-delete from experience;
+-- File Hendlear
+create table files(
+id varchar(255) primary key,
+data longblob,
+file_name varchar(255),
+file_type varchar(255)
+);
+
+select * from files;
