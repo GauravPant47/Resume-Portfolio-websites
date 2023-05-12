@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ResumeApplication<resume>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "net.resume.ResumeApplication",
+            "projectName": "resume",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
