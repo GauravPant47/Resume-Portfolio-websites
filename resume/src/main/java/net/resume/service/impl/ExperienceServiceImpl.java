@@ -1,6 +1,7 @@
 package net.resume.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,17 +13,24 @@ import net.resume.service.ExperienceService;
 @Service
 public class ExperienceServiceImpl implements ExperienceService {
 
-//	@Autowired
+	@Autowired
 	private ExperienceRepository experienceRepository;
 
-	public ExperienceServiceImpl(ExperienceRepository experienceRepository) {
-		super();
-		this.experienceRepository = experienceRepository;
+	@Override
+	public List<ExperienceModel> findAllListPost() {
+		return this.experienceRepository.findAll();
 	}
 
 	@Override
-	public List<ExperienceModel> findAllListItem() {
-		return this.experienceRepository.findAll();
+	public Optional<ExperienceModel> searchByID(Long id) {
+		// TODO Auto-generated method stub
+		return experienceRepository.findById(id);
+	}
+
+	@Override
+	public ExperienceModel savePost(ExperienceModel experienceModel) {
+		// TODO Auto-generated method stub
+		return experienceRepository.save(experienceModel);
 	}
 
 }

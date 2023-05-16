@@ -7,6 +7,7 @@
 <link rel="stylesheet" th:href="@{/css/style.css}">
 <link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
 <link rel="stylesheet" th:href="@{/css/navbarAndFooter.css}">
+<link rel="stylesheet" th:href="@{/css/newpost.css}">
 <body>
 	<!-- Navbar strat -->
 	<nav>
@@ -28,30 +29,28 @@
 
 	<!-- About Me -->
 
-	<form th:action="@{'/experiences/new'}" th:object="${experience}" method="post">
+	<form 
+		th:action="@{'/experience/new'}" 
+		th:object="${experience}" 
+		method="post">
 	
-		<h2>Write new Post</h2>
-		<div>
-			<label for="new-post-title">Title</label> 
+		<h2 style="margin:15px 0 15px">Write New Experience</h2>
+			<label for="title">Title:</label>
 			<input id="new-post-title" type="text" th:field="*{title}" placeholder="Title" />
-		</div>
-		<div>
-			<label for="new-post-companyname">CompanyName</label>
-			<textarea id="new-post-companyname" th:field="*{companyname}"></textarea>
-		</div>
-		<div>
-			<label for="new-post-location">Location</label>
-			<textarea id="new-post-location" th:field="*{location}"></textarea>
-		</div>
-		<div>
-			<label for="new-post-workingyear">WorkingYear</label>
-			<textarea id="new-post-workingyear" th:field="*{workingyear}"></textarea>
-		</div>
-		<div>
-			<label for="new-post-description">Description</label>
-			<textarea id="new-post-description" th:field="*{description}"></textarea>
-		</div>
-		<button type="submit">Publish Post</button>
+		
+			<label for="company">Company Name:</label>
+			<textarea id="new-post-companyname" type="text" th:field="*{companyname}" placeholder="Company Name"></textarea>
+		
+			<label for="location">Location:</label>
+			<textarea id="new-post-location" type="text" th:field="*{location}" placeholder="Location"></textarea>
+		
+			 <label for="working-year">Working Year:</label>
+			<textarea id="new-post-workingyear" type="text" th:field="*{workingyear}" placeholder="Working Year"></textarea>
+		
+			<label for="description">Description:</label>
+			<textarea id="new-post-description" th:field="*{description}" placeholder="Description"></textarea>
+		
+			<input class="btn" type="submit" value="Submit">
 	</form>
 
 	<!-- About Me -->

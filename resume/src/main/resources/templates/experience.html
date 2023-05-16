@@ -2,19 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Resume-Portfolio-websites</title>
-	<link rel="stylesheet" th:href="@{/css/style.css}">
-	<link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
-	<link rel="stylesheet" th:href="@{/css/navbarAndFooter.css}">
-
+<meta charset="UTF-8">
+<title>Resume-Portfolio-websites</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
+<link rel="stylesheet" th:href="@{/css/navbarAndFooter.css}">
 <body>
 	<!-- Navbar strat -->
 	<nav>
 		<div class="logo">G.P.R</div>
 		<ul class="nav-links">
 			<li><a th:href="@{/index}" class="active">ABOUT ME</a></li>
-			<li> <a th:href="@{/experience}">EMPLOYMENT</a></li>
+			<li><a th:href="@{/experience}">EMPLOYMENT</a></li>
 			<li><a th:href="@{/education}">EDUCATION</a></li>
 			<li><a th:href="@{/project}">PROJECTS</a></li>
 			<li><a th:href="@{/contact}">CONTACT</a></li>
@@ -29,26 +28,20 @@
 
 	<!-- About Me -->
 	<div class="cart-header">
-		Employment
-		<a th:href="@{/experience/2ffa588f-c037-45d9-a861-75ae0a76ca18}"><button class="btn btnLeft" th:form="responseEntity">DOWNLOAD</button></a>
+		Employment 
+		<a class="btn btnLeft" th:href="@{/experience/new}">New Post</a>
 	</div>
-	<div class="cart">
-		<label class="right color">Operations Analyst</label>
-		<label class="right">OnGrid - Background verification platform</label>
-		<label class="right">Gurugram, Haryana, India</label>
-		<label class="right">Nov 2020 to Jul 2022 (1 year 9 months)</label>
-		<label class="right">My responsibilities for this company were Field Onboarding, Field management
-			and Cluster
-			Checking, Daily Data Dump Generation, Data Assignment, and Data Entry</label>
+	<div class="cart" th:each="experience : ${experience}">
+		<a class="right color"th:text="${experience.title}">Title</a>
+		<h5  class="right" th:text="${experience.companyname}">Company Name</h5>
+		<h5  class="right" th:text="${experience.location}">Location</h5>
+		<h5  class="right" th:text="${experience.workingyear}">Working Year</h5>
+		<p  class="right" th:text="${experience.description}">Description</p>
+		<br /> 
 	</div>
-	<div class="cart">
-		<label class="right color">Quality Inspector</label>
-		<label class="right">Motherson Sumi Systems</label>
-		<label class="right">Kutch district, Gujarat, India</label>
-		<label class="right">Jun 2019 to Sep 2020 (1 year 4 months)</label>
-		<label class="right">In this company, my job was manpower handling daily Production output and quality
-			maintenance and Daily Production Planning.</label>
-	</div>
+	<hr />
+
+
 	<!-- About Me -->
 
 	<!-- Footer strat -->
@@ -62,9 +55,12 @@
 			<p>Call: 1-800-123-4567</p>
 		</div>
 		<div class="right">
-			<a href="https://www.linkedin.com/in/gaurav-pant-a31866175"><i class="fa fa-linkedin" style="color: blue;"></i></a>
-			<a href="https://github.com/GauravPant47"><i class="fa fa-github" style="color: black;"></i></a>
-			<a href="https://twitter.com/gauravpant63469"><i class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
+			<a href="https://www.linkedin.com/in/gaurav-pant-a31866175"><i
+				class="fa fa-linkedin" style="color: blue;"></i></a> <a
+				href="https://github.com/GauravPant47"><i class="fa fa-github"
+				style="color: black;"></i></a> <a
+				href="https://twitter.com/gauravpant63469"><i
+				class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
 		</div>
 	</footer>
 	<!-- Footer End -->

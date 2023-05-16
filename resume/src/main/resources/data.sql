@@ -7,12 +7,12 @@ drop database experienceData;
 use PersonaPortfolio;
 
 create table experience(
-experience_id int auto_increment primary key,
-title varchar(300) not null,
-company_name varchar(300) not null,
-location varchar(300) not null,
-working_year varchar(300) not null,
-description varchar(2000) not null
+id int auto_increment primary key,
+title varchar(300),
+company_name varchar(300),
+location varchar(300),
+working_year varchar(300),
+description varchar(2000)
 );
 
 select * from experience;

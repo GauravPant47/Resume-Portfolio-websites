@@ -14,8 +14,7 @@ public class ExperienceModel {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "experience_id")
-	private long experienceid;
+	private long id;
 
 	@Column(name = "title")
 	private String title;
@@ -32,17 +31,13 @@ public class ExperienceModel {
 	@Column(name = "description")
 	private String description;
 
-	public ExperienceModel() {
-
+	
+	public long getId() {
+		return id;
 	}
 
-	public ExperienceModel(String title, String companyname, String location, String workingyear, String description) {
-		super();
-		this.title = title;
-		this.companyname = companyname;
-		this.location = location;
-		this.workingyear = workingyear;
-		this.description = description;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getTitle() {
