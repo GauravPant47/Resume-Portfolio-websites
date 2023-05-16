@@ -7,6 +7,7 @@
 <link rel="stylesheet" th:href="@{/css/style.css}">
 <link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
 <link rel="stylesheet" th:href="@{/css/navbarAndFooter.css}">
+<link rel="stylesheet" th:href="@{/css/newpost.css}">
 <body>
 	<!-- Navbar strat -->
 	<nav>
@@ -27,20 +28,30 @@
 	<!-- Navbar End -->
 
 	<!-- About Me -->
-	<div class="cart-header">
-		Employment 
-		<a class="btn btnLeft" th:href="@{/experience/new}">New Post</a>
-	</div>
-	<div class="cart" th:each="experience : ${experience}">
-		<a class="right color"th:text="${experience.title}">Title</a>
-		<h5 class="right" th:text="${experience.companyname}">Company Name</h5>
-		<h5 class="right" th:text="${experience.location}">Location</h5>
-		<h5 class="right" th:text="${experience.workingyear}">Working Year</h5>
-		<p class="right" th:text="${experience.description}">Description</p>
-		<br /> 
-	</div>
-	<hr />
 
+	<form 
+		th:action="@{'/education/new'}" 
+		th:object="${education}" 
+		method="post">
+	
+		<h2 style="margin:15px 0 15px">Write New Experience</h2>
+			<label for="title">Education:</label>
+			<input id="new-post-title" type="text" th:field="*{title}" placeholder="Title" />
+		
+			<label for="company">Institute :</label>
+			<textarea id="new-post-companyname" type="text" th:field="*{college}" placeholder="Institute"></textarea>
+		
+			<label for="location">Location:</label>
+			<textarea id="new-post-location" type="text" th:field="*{location}" placeholder="Location"></textarea>
+		
+			 <label for="working-year">Course Duration:</label>
+			<textarea id="new-post-workingyear" type="text" th:field="*{course}" placeholder="Course Duration"></textarea>
+		
+			<label for="description">Description:</label>
+			<textarea id="new-post-description" th:field="*{description}" placeholder="Description"></textarea>
+		
+			<input class="btn" type="submit" value="Submit">
+	</form>
 
 	<!-- About Me -->
 

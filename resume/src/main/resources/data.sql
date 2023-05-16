@@ -19,6 +19,21 @@ select * from experience;
 -- experience
 drop table experience;
 
+-- education 
+
+create table education(
+id int auto_increment primary key,
+title varchar(300),
+college varchar(300),
+location varchar(300),
+course_year varchar(300),
+description varchar(2000)
+);
+select * from education;
+
+drop table education;
+-- education 
+
 -- File Hendlear
 create table files(
 id varchar(255) primary key,
@@ -28,3 +43,7 @@ file_type varchar(255)
 );
 
 select * from files;
+
+
+drop table files;
+-- File Hendlear

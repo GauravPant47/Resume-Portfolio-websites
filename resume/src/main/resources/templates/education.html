@@ -30,27 +30,15 @@
 	<!-- About Me -->
         <div class="cart-header">
             Education
+            <a class="btn btnLeft" th:href="@{/education/new}">New Post</a>
         </div>
-        <div class="cart">
-            <label class="right color">Post Graduate, Full Stack Web Development</label>
-            <label class="right">Skill-Lync</label>
-			<label class="right">Porur, Chennai, Tamil Nadu, India</label>
-            <label class="right">Sep 2022 Started</label>
-            <label class="right">I studied Java, Databases, and the Spring Boot Framework at Skill-Link. Additionally, I learned to work with Git and GitHub, as well as Docker.</label>
-        </div>
-        <div class="cart">
-            <label class="right color">Bachelor of Technology</label>
-            <label class="right">Radha Govind Group Of Collegess</label>
-            <label class="right">Moradabad district, Uttar Pradesh, India</label>
-            <label class="right">3 year of Course(2020 to 2025)</label>
-            <label class="right">Till now I achieve 70.38%. And I have 3 semesters more</label>
-        </div>
-        <div class="cart">
-            <label class="right color">Diploma Mechanical</label>
-            <label class="right">Uttarakhand Institute Of Technical & Professional Education</label>
-            <label class="right">Nainital district, Uttarakhand, India</label>
-            <label class="right">3 year of Course(2016 to 2019)</label>
-            <label class="right">I have made 66.6% in this 3 years course</label>
+        <div class="cart" th:each="education : ${education}">
+        <a class="right color"th:text="${education.title}">Title</a>
+		<h5 class="right" th:text="${education.college}">College</h5>
+		<h5 class="right" th:text="${education.location}">Location</h5>
+		<h5 class="right" th:text="${education.course}">Course</h5>
+		<p class="right" th:text="${education.description}">Description</p>
+		<br /> 
         </div>
 	<!-- About Me -->
 
