@@ -11,5 +11,5 @@ public interface ExperienceService {
 	Optional<ExperienceModel> searchByID(Long id);
 
 	ExperienceModel savePost(ExperienceModel experienceModel);
-
+	void deleteById(Long Id);
 }

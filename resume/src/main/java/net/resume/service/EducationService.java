@@ -9,7 +9,8 @@ public interface EducationService {
 	List<Education> findAllListPost();
 	
 	Education savePost(Education education);
-
+	
+	void deletePostById(Long Id);
 	
 
 }

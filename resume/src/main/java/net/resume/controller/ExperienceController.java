@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import net.resume.model.ExperienceModel;
 import net.resume.service.ExperienceService;
@@ -57,6 +58,13 @@ public class ExperienceController {
 	@PostMapping("/experience/new")
 	public String saveNewPost(@ModelAttribute ExperienceModel experienceModel) {
 		experienceService.savePost(experienceModel);
+		return "redirect:/experience";
+	}
+	
+	@GetMapping("/experience/delete")
+	public String deleteProject(@RequestParam Long id)
+	{
+		this.experienceService.deleteById(id);
 		return "redirect:/experience";
 	}
 

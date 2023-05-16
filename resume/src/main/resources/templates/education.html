@@ -33,6 +33,7 @@
             <a class="btn btnLeft" th:href="@{/education/new}">New Post</a>
         </div>
         <div class="cart" th:each="education : ${education}">
+        <a class="btn" th:href="@{/education/delete(id=${education.id})}">Delete</a>
         <a class="right color"th:text="${education.title}">Title</a>
 		<h5 class="right" th:text="${education.college}">College</h5>
 		<h5 class="right" th:text="${education.location}">Location</h5>
