@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Resume-Portfolio-websites</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
+<link rel="stylesheet" th:href="@{/css/navbarAndFooter.css}">
+<link rel="stylesheet" th:href="@{/css/newpost.css}">
+<body>
+	<!-- Navbar strat -->
+	<nav>
+		<div class="logo">G.P.R</div>
+		<ul class="nav-links">
+			<li><a th:href="@{/index}" class="active">ABOUT ME</a></li>
+			<li><a th:href="@{/experience}">EMPLOYMENT</a></li>
+			<li><a th:href="@{/education}">EDUCATION</a></li>
+			<li><a th:href="@{/project}">PROJECTS</a></li>
+			<li><a th:href="@{/contact}">CONTACT</a></li>
+		</ul>
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</nav>
+	<!-- Navbar End -->
+
+	<!-- About Me -->
+
+	<form 
+		th:action="@{'/project/new'}" 
+		th:object="${project}" 
+		method="post">
+	
+		<h2 style="margin:15px 0 15px">Write New Experience</h2>
+		
+			<label for="title">Title:</label>
+			<input id="new-post-title" type="text" th:field="*{title}" placeholder="Title" />
+		
+			<label for="company">URL:</label>
+			<textarea id="new-post-companyname" type="text" th:field="*{url}" placeholder="URL"></textarea>
+		
+			<label for="description">Detail of project:</label>
+			<textarea id="new-post-description" th:field="*{detailofproject}" placeholder="Detail of project"></textarea>
+		
+			<input class="btn" type="submit" value="Submit">
+	</form>
+
+	<!-- About Me -->
+
+	<!-- Footer strat -->
+	<footer>
+		<div class="left">
+			<div class="logo">G.P.R</div>
+			<p>© 2023 Gaurav-Pant Inc.</p>
+		</div>
+		<div class="middle">
+			<p>Email: info@gauravpant.com</p>
+			<p>Call: 1-800-123-4567</p>
+		</div>
+		<div class="right">
+			<a href="https://www.linkedin.com/in/gaurav-pant-a31866175"><i
+				class="fa fa-linkedin" style="color: blue;"></i></a> <a
+				href="https://github.com/GauravPant47"><i class="fa fa-github"
+				style="color: black;"></i></a> <a
+				href="https://twitter.com/gauravpant63469"><i
+				class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
+		</div>
+	</footer>
+	<!-- Footer End -->
+</body>
+<script>
+	const burger = document.querySelector('.burger');
+	const nav = document.querySelector('.nav-links');
+
+	burger.addEventListener('click', () => {
+		nav.classList.toggle('show');
+		burger.classList.toggle('nav-active');
+	});
+</script>
+
+</html>

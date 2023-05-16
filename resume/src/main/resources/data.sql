@@ -34,6 +34,17 @@ select * from education;
 drop table education;
 -- education 
 
+-- project
+create table project(
+id int auto_increment primary key,
+title varchar (300),
+url varchar(300),
+details_of_project varchar(3000)
+);
+
+select * from education;
+-- project
+
 -- File Hendlear
 create table files(
 id varchar(255) primary key,
