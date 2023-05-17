@@ -42,7 +42,7 @@ url varchar(300),
 details_of_project varchar(3000)
 );
 
-select * from education;
+select * from project;
 -- project
 
 -- File Hendlear
