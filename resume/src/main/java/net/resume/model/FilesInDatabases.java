@@ -27,16 +27,12 @@ public class FilesInDatabases {
 
 	}
 	
-	
-
 	public FilesInDatabases(String fileName, String fileType, byte[] data) {
 		super();
 		this.fileName = fileName;
 		this.fileType = fileType;
 		this.data = data;
 	}
-
-
 
 	public String getId() {
 		return id;

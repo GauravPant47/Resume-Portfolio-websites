@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,40 +16,39 @@ public class Education {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(name = "title")
 	private String title;
-	
+
 	@Column(name = "college")
 	private String college;
-	
+
 	@Column(name = "location")
 	private String location;
-	
+
 	@Column(name = "course_year")
 	private String course;
-	
+
 	@Column(name = "description")
 	private String description;
 
-	
-	
-	
-	
-	
-	
-	
+	@ManyToOne
+	@JoinColumn(name = "account_id", referencedColumnName = "id", nullable = false)
+	private Account account;
+
 	public Education() {
 		super();
 	}
 
-	public Education(String title, String college, String location, String course, String description) {
+	public Education(String title, String college, String location, String course, String description,
+			Account account) {
 		super();
 		this.title = title;
 		this.college = college;
 		this.location = location;
 		this.course = course;
 		this.description = description;
+		this.account = account;
 	}
 
 	public Long getId() {
@@ -97,5 +98,13 @@ public class Education {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
 }

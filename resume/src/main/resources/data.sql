@@ -2,9 +2,25 @@ drop database if exists experienceData;
 drop table if exists experience;
 
 
-create database PersonaPortfolio;
+create database resumedata;
 drop database experienceData;
 use PersonaPortfolio;
+
+create table account(
+id int auto_increment primary key,
+first_name varchar(300),
+last_name varchar(300),
+email varchar(300),
+password varchar(300)
+);
+create table authority(
+id int auto_increment primary key,
+name varchar(20)
+);
+create table users_roles(
+account_id int references account(id),
+authority_id int references authority(id)
+);
 
 create table experience(
 id int auto_increment primary key,
@@ -12,12 +28,13 @@ title varchar(300),
 company_name varchar(300),
 location varchar(300),
 working_year varchar(300),
-description varchar(2000)
+description varchar(2000),
+account_id int references account(id)
 );
 
 select * from experience;
 -- experience
-drop table experience;
+drop table post;
 
 -- education 
 
@@ -27,7 +44,8 @@ title varchar(300),
 college varchar(300),
 location varchar(300),
 course_year varchar(300),
-description varchar(2000)
+description varchar(2000),
+account_id int references account(id)
 );
 select * from education;
 
@@ -39,7 +57,8 @@ create table project(
 id int auto_increment primary key,
 title varchar (300),
 url varchar(300),
-details_of_project varchar(3000)
+details_of_project varchar(3000),
+account_id int references account(id)
 );
 
 select * from project;
@@ -56,5 +75,5 @@ file_type varchar(255)
 select * from files;
 
 
-drop table files;
+drop table project;
 -- File Hendlear
