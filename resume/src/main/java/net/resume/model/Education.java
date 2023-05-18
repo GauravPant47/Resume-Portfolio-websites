@@ -30,6 +30,26 @@ public class Education {
 	@Column(name = "description")
 	private String description;
 
+	
+	
+	
+	
+	
+	
+	
+	public Education() {
+		super();
+	}
+
+	public Education(String title, String college, String location, String course, String description) {
+		super();
+		this.title = title;
+		this.college = college;
+		this.location = location;
+		this.course = course;
+		this.description = description;
+	}
+
 	public Long getId() {
 		return id;
 	}
