@@ -13,6 +13,9 @@ last_name varchar(300),
 email varchar(300),
 password varchar(300)
 );
+
+select * from account;
+
 create table authority(
 id int auto_increment primary key,
 name varchar(20)

@@ -1,5 +1,9 @@
 package net.resume.repository;
 
-public interface AuthorityRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import net.resume.model.Authority;
+
+public interface AuthorityRepository extends JpaRepository<Authority, Long>{
 
 }
