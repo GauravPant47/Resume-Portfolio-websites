@@ -17,7 +17,8 @@ public class WebSecurityConfig {
 	public static PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-	private static final String[] WHITELST= {
+
+	private static final String[] WHITELST = {
 			"/image/**",
 			"/css/**",
 			"/fonts/**",
@@ -30,31 +31,31 @@ public class WebSecurityConfig {
 			"/project",
 			"/index"
 	};
-	
+
 	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
-			.authorizeRequests()
-			.antMatchers(WHITELST).permitAll()
-			.antMatchers(HttpMethod.GET, "/index/*").permitAll()
-			.anyRequest().authenticated();
+				.authorizeRequests()
+				.antMatchers(WHITELST).permitAll()
+				.antMatchers(HttpMethod.GET, "/index/*").permitAll()
+				.anyRequest().authenticated();
 
 		http
-			.formLogin()
-			.loginPage("/login")
-			.loginProcessingUrl("/login")
-			.usernameParameter("email")
-			.passwordParameter("password")
-			.defaultSuccessUrl("/index", true)
-			.failureUrl("/login?error")
-			.permitAll()
-			.and()
-			.logout()
-			.logoutUrl("/logout")
-			.logoutSuccessUrl("/login?logout")
-			.and()
-			.httpBasic();
-		
+				.formLogin()
+				.loginPage("/login")
+				.loginProcessingUrl("/login")
+				.usernameParameter("email")
+				.passwordParameter("password")
+				.defaultSuccessUrl("/index", true)
+				.failureUrl("/login?error")
+				.permitAll()
+				.and()
+				.logout()
+				.logoutUrl("/logout")
+				.logoutSuccessUrl("/login?logout")
+				.and()
+				.httpBasic();
+
 		return http.build();
 	}
 }

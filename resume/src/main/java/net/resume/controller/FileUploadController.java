@@ -15,7 +15,6 @@ import net.resume.model.FilesInDatabases;
 import net.resume.payload.Response;
 import net.resume.service.FileDatabasesService;
 
-
 @RestController
 public class FileUploadController {
 	@Autowired
