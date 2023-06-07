@@ -4,6 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import net.resume.model.Authority;
 
-public interface AuthorityRepository extends JpaRepository<Authority, Long>{
-
+public interface AuthorityRepository extends JpaRepository<Authority, String> {
 }

@@ -1,8 +1,7 @@
 package net.resume.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,26 +10,30 @@ import javax.persistence.Table;
 public class Authority {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-
+	@Column(length = 16)
 	private String name;
 
-	public Authority() {
-		super();
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+		Authority authority1 = (Authority) o;
+
+		return name.equals(authority1.name);
 	}
 
-	public Authority(String name) {
-		super();
-		this.name = name;
+	@Override
+	public int hashCode() {
+		return name.hashCode();
 	}
 
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
+	@Override
+	public String toString() {
+		return "Authority{" + "name='" + name + "'" + "}";
 	}
 
 	public String getName() {

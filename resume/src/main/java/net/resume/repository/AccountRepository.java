@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import net.resume.model.Account;
 
 @Repository
-public interface AccountRepository extends JpaRepository<Account, Long>{
-	Optional<Account> findOneByEmail(String email);
+public interface AccountRepository extends JpaRepository<Account, Long> {
+
+	Optional<Account> findOneByEmailIgnoreCase(String email);
 }

@@ -1,64 +1,42 @@
 package net.resume.model;
 
-import java.util.Collection;
+import java.util.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "account", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Table(name = "account")
 public class Account {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
-
-	@Column(name = "first_name")
-	private String firstName;
-
-	@Column(name = "last_name")
-	private String lastName;
 
 	private String email;
 
 	private String password;
 
-	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "account_id", referencedColumnName = "id"), 
-	inverseJoinColumns = @JoinColumn(name = "authority_id", referencedColumnName = "id"))
+	private String fullName;
 
-	private Collection<Authority> authorities;
+	private String gender;
 
-	public Account() {
-		super();
-	}
+	private String dob;
 
-	public Account(String firstName, String lastName, String email, String password,
-			Collection<Authority> authorities) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.password = password;
-		this.authorities = authorities;
-	}
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "account_authority", joinColumns = {
+			@JoinColumn(name = "account_id", referencedColumnName = "id") }, inverseJoinColumns = {
+					@JoinColumn(name = "authority_name", referencedColumnName = "name") })
+	private Set<Authority> authorities = new HashSet<>();
 
-	public Collection<Authority> getAuthorities() {
-		return authorities;
-	}
-
-	public void setAuthorities(Collection<Authority> authorities) {
-		this.authorities = authorities;
+	@Override
+	public String toString() {
+		return "Account{" +
+				"id=" + id +
+				", fullName='" + fullName + "'" +
+				", gender='" + gender + "'" +
+				", email='" + email + "'" +
+				", dob='" + dob + "'" +
+				", authorities=" + authorities +
+				"}";
 	}
 
 	public Long getId() {
@@ -67,22 +45,6 @@ public class Account {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -101,4 +63,35 @@ public class Account {
 		this.password = password;
 	}
 
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+
+	public Set<Authority> getAuthorities() {
+		return authorities;
+	}
+
+	public void setAuthorities(Set<Authority> authorities) {
+		this.authorities = authorities;
+	}
 }

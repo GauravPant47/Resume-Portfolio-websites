@@ -14,17 +14,18 @@ import net.resume.service.AccountService;
 public class RegisterController {
 	@Autowired
 	private AccountService accountService;
-	
+
 	@GetMapping("/register")
-	public String getRegisterPage(Model model) {
+	public String getRegisterForm(Model model) {
+
 		Account account = new Account();
 		model.addAttribute("account", account);
 		return "register";
 	}
-	
+
 	@PostMapping("/register")
 	public String registerNewUser(@ModelAttribute Account account) {
-		accountService.savedata(account);
-		return "redirect:/index";	
+		accountService.save(account);
+		return "redirect:/index";
 	}
 }
