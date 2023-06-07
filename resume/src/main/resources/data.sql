@@ -7,23 +7,32 @@ drop database experienceData;
 use PersonaPortfolio;
 
 create table account(
-id int auto_increment primary key,
-first_name varchar(300),
-last_name varchar(300),
+id bigint auto_increment primary key,
+full_name varchar(300),
+gender varchar(300),
+dob varchar(300),
 email varchar(300),
 password varchar(300)
 );
 
+
 select * from account;
+drop table account;
+---
+create table hibernate_sequence(next_val bigint);
+---
 
 create table authority(
-id int auto_increment primary key,
-name varchar(20)
+name varchar(20) primary key
 );
-create table users_roles(
+drop table authority;
+
+
+create table account_authority(
 account_id int references account(id),
-authority_id int references authority(id)
+authority_name varchar(16) primary key references authority(name)
 );
+drop table account_authority;
 
 create table experience(
 id int auto_increment primary key,
@@ -36,6 +45,7 @@ account_id int references account(id)
 );
 
 select * from experience;
+drop table experience;
 -- experience
 drop table post;
 
@@ -65,6 +75,7 @@ account_id int references account(id)
 );
 
 select * from project;
+drop table project;
 -- project
 
 -- File Hendlear
@@ -76,6 +87,7 @@ file_type varchar(255)
 );
 
 select * from files;
+
 
 
 drop table project;

@@ -2,12 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<meta charset="UTF-8">
-<title>Resume-Portfolio-websites</title>
-<link rel="stylesheet" th:href="@{/css/style.css}">
-<link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
-<link rel="stylesheet" th:href="@{/css/navbarAndFooter.css}">
-<link rel="stylesheet" th:href="@{/css/newpost.css}">
+	<meta charset="UTF-8">
+	<title>Resume-Portfolio-websites</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="stylesheet" th:href="@{/css/resumeStyle.css}">
+	<link rel="stylesheet" th:href="@{/css/navbarAndFooter.css}">
+	<link rel="stylesheet" th:href="@{/css/newpost.css}">
+
 <body>
 	<!-- Navbar strat -->
 	<nav>
@@ -28,19 +29,17 @@
 	<!-- Navbar End -->
 
 	<!-- About Me -->
-	
-	<form 
-		th:action="@{/login}"
-		method="post">
-	
-		<h1 style="margin:15px 0 15px">Login </h1>
+
+	<form action="#" th:action="@{/login}" method="POST">
+		<div>
 			<label for="email">Email</label>
 			<input id="email" type="text" name="email" placeholder="Email" />
-		
+		</div>
+		<div>
 			<label for="password">Password</label>
-			<input id="password" type="text" name="password" placeholder="Password" />
-		
-			<button type="submit">Login</button>
+			<input id="password" type="password" name="password" placeholder="Password" />
+		</div>
+		<button type="submit">Login!</button>
 	</form>
 
 	<!-- About Me -->
@@ -56,12 +55,10 @@
 			<p>Call: 1-800-123-4567</p>
 		</div>
 		<div class="right">
-			<a href="https://www.linkedin.com/in/gaurav-pant-a31866175"><i
-				class="fa fa-linkedin" style="color: blue;"></i></a> <a
-				href="https://github.com/GauravPant47"><i class="fa fa-github"
-				style="color: black;"></i></a> <a
-				href="https://twitter.com/gauravpant63469"><i
-				class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
+			<a href="https://www.linkedin.com/in/gaurav-pant-a31866175"><i class="fa fa-linkedin"
+					style="color: blue;"></i></a> <a href="https://github.com/GauravPant47"><i class="fa fa-github"
+					style="color: black;"></i></a> <a href="https://twitter.com/gauravpant63469"><i
+					class="fa fa-twitter" style="color: rgb(0, 102, 255);"></i></a>
 		</div>
 	</footer>
 	<!-- Footer End -->
